@@ -21,7 +21,7 @@ Para executar este projeto, é necessário ter o seguinte software instalado:
 1. Clone este repositório usando o seguinte comando:
 ```git clone https://github.com/ElioGaldino3/state_managers.git```
 2. Entre na pasta do projeto
-```cd state_managers/bloc_example```
+```cd state_managers/getx_example```
 3. Baixe as bibliotecas necessárias
 ```flutter pub get```
 4. Conecte um dispositivo móvel ou execute um emulador.
