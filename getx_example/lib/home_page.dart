@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:mobx_example/dragon_store.dart';
-import 'package:mobx_example/repositories/repository.dart';
+import 'package:get/get.dart';
+import 'package:getx_example/dragon_store.dart';
+import 'package:getx_example/repositories/repository.dart';
 import 'package:uno/uno.dart';
 
 class HomePage extends StatefulWidget {
@@ -30,13 +30,13 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(title: Text(widget.title)),
       body: Container(
         padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
-        child: Observer(
-          builder: (context) {
-            if (_dragonStore.isLoading) {
+        child: Obx(
+          () {
+            if (_dragonStore.isLoading.value) {
               return const Center(child: CircularProgressIndicator());
             }
 
-            if (_dragonStore.hasError) {
+            if (_dragonStore.hasError.value) {
               return const Center(child: Text('Erro ao carregar dragões'));
             }
 

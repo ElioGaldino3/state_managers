@@ -1,4 +1,4 @@
-import 'package:mobx_example/models/dragon.dart';
+import 'package:getx_example/models/dragon.dart';
 import 'package:uno/uno.dart';
 
 class UnoRepository {
